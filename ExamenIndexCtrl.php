@@ -27,11 +27,11 @@ class ExamenIndexCtrl
 		$this->getRecomendaciones();
 		
 		echo '<h1>Google Play</h1>';
-		$this->reproductor_musica = new ReproductorMusica( new RecomendadorExternoRedknow() );
+		$this->reproductor_musica = new ReproductorMusicaGooglePlay( new RecomendadorExternoRedknow() );
 		$this->getRecomendaciones();
 		
 		echo '<h1>Spotify</h1>';
-		$this->reproductor_musica = new ReproductorMusica( new RecomendadorExternoBlueknow() );
+		$this->reproductor_musica = new ReproductorMusicaSpotify( new RecomendadorExternoBlueknow() );
 		$this->getRecomendaciones();
 	}
 	

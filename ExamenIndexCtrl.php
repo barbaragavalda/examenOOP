@@ -23,15 +23,15 @@ class ExamenIndexCtrl
 	{
 		echo '<h1>Local</h1>';
 		// Instancio el reproductor de música pasándole el tipo de reproductor que quiero.
-		$this->reproductor_musica = new ReproductorMusica();
+		$this->reproductor_musica = new ReproductorMusica( new RecomendadorLocal() );
 		$this->getRecomendaciones();
 		
 		echo '<h1>Google Play</h1>';
-		$this->reproductor_musica = new ReproductorMusicaGooglePlay();
+		$this->reproductor_musica = new ReproductorMusica( new RecomendadorExternoRedknow() );
 		$this->getRecomendaciones();
 		
 		echo '<h1>Spotify</h1>';
-		$this->reproductor_musica = new ReproductorMusicaSpotify();
+		$this->reproductor_musica = new ReproductorMusica( new RecomendadorExternoBlueknow() );
 		$this->getRecomendaciones();
 	}
 	

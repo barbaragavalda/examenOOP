@@ -21,9 +21,9 @@ class ReproductorMusica
 
 	/**
 	 */
-	public function __construct()
+	public function __construct( RecomendadorInterface $recomendador )
 	{
-		$this->recomendador = new RecomendadorLocal();
+		$this->recomendador = $recomendador;
 	}
 
 	/**
